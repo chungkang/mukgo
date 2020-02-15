@@ -8,11 +8,12 @@
 	<meta name="keywords" content="먹방에 관한 고찰, 먹방, Mukbang, 먹고, MukGo, 먹방 리스트, 쯔양, 벤쯔, 복희, 엠브로, jane asmr">
 	<title>MukGo-먹방에 관한 고찰</title>
 
+    {% load static %}
     <!--style-->
-	<link rel="stylesheet" href="/home/templates/css/reset.css">
-    <link rel="stylesheet" href="/home/templates/css/style.css">
-<!--    <link rel="stylesheet" href="css/font-awesome.css">-->
-<!--    <link rel="stylesheet" href="css/slick.css">-->
+	<link rel="stylesheet" href="{% static 'css/reset.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/font-awesome.css' %}">
+    <link rel="stylesheet" href="{% static 'css/slick.css' %}">
 
 <!--meta tags
       < Facebook meta tags>
@@ -31,15 +32,15 @@
     <meta property="twitter:image" content="http://mukgo.net/response/html5/icon/MukGo_logo_1.0.jpg" />
 -->
     <!-- 파비콘 -->
-    <link rel="shortcut icon" href="icon/MukGo_logo_1.0.jpg">
-    <link rel="apple-touch-icon-precomposed" href="icon/MukGo_logo_1.0.jpg">
+    <link rel="shortcut icon" href="{% static 'icon/MukGo_logo_1.0.jpg' %}">
+    <link rel="apple-touch-icon-precomposed" href="{% static 'icon/MukGo_logo_1.0.jpg' %}">
 
     <!--웹 폰트-->
     <link href="https://fonts.googleapis.com/css?family=Abel&display=swap" rel="stylesheet">
  
     <!-- HTLM5shiv ie6~8 -->
     <!--[if lt IE 9]> 
-        <script src="js/html5shiv.min.js"></script>
+        <script src="{% static 'js/html5shiv.min.js' %}"></script>
         <script type="text/javascript">
             alert("현재 당신이 보는 브라우저는 지원하지 않습니다. 최신 브라우저로 업데이트해주세요!");
         </script>
@@ -132,8 +133,8 @@
                             <h5 class="ir_su">Image1</h5>
                             <figure>
                                 <a href="#">
-                                    <img src="../img/blog1_@1.jpg" class="img-normal" alt="normal image">
-                                    <img src="../img/blog1_@2.jpg" class="img-retina" alt="retina image">
+                                    <img src="{% static 'img/blog1_@1.jpg' %}" class="img-normal" alt="normal image">
+                                    <img src="{% static 'img/blog1_@2.jpg' %}" class="img-retina" alt="retina image">
                                 <!-- <img src="img/blog2_@1.jpg" srcset="img/blog2_@1.jpg 1x, img/blog2_@2.jpg 2x" alt="normal image"> -->
 
                                     <figcaption>반응형 웹 사이트 이미지 글입니다. 반응형 웹 사이트 이미지 글입니다. 반응형 웹 사이트 이미지 글입니다. 반응형 웹 사이트 이미지 글입니다.</figcaption>
@@ -158,40 +159,40 @@
                     <article class="column col4">
                         <h4 class="col_tit">Mukbang Rank</h4>
                         <p class="col_desc">먹방 랭킹 차트입니다.</p>
-                        <!-- 먹방 랭킹 차트 -->{
-                            // The tab key will cycle through the settings when first created
-                            // Visit http://wbond.net/sublime_packages/sftp/settings for help
-                            
-                            // sftp, ftp or ftps
-                            "type": "sftp",
-                        
-                            "sync_down_on_open": true,
-                            "sync_same_age": true,
-                            
-                            "host": "example.com",
-                            "user": "username",
-                            //"password": "password",
-                            //"port": "22",
-                            
-                            "remote_path": "/example/path/",
-                            //"file_permissions": "664",
-                            //"dir_permissions": "775",
-                            
-                            //"extra_list_connections": 0,
-                        
-                            "connect_timeout": 30,
-                            //"keepalive": 120,
-                            //"ftp_passive_mode": true,
-                            //"ftp_obey_passive_host": false,
-                            //"ssh_key_file": "~/.ssh/id_rsa",
-                            //"sftp_flags": ["-F", "/path/to/ssh_config"],
-                            
-                            //"preserve_modification_times": false,
-                            //"remote_time_offset_in_hours": 0,
-                            //"remote_encoding": "utf-8",
-                            //"remote_locale": "C",
-                            //"allow_config_upload": false,
-                        }
+<!--                        &lt;!&ndash; 먹방 랭킹 차트 &ndash;&gt;{-->
+<!--                            // The tab key will cycle through the settings when first created-->
+<!--                            // Visit http://wbond.net/sublime_packages/sftp/settings for help-->
+<!--                            -->
+<!--                            // sftp, ftp or ftps-->
+<!--                            "type": "sftp",-->
+<!--                        -->
+<!--                            "sync_down_on_open": true,-->
+<!--                            "sync_same_age": true,-->
+<!--                            -->
+<!--                            "host": "example.com",-->
+<!--                            "user": "username",-->
+<!--                            //"password": "password",-->
+<!--                            //"port": "22",-->
+<!--                            -->
+<!--                            "remote_path": "/example/path/",-->
+<!--                            //"file_permissions": "664",-->
+<!--                            //"dir_permissions": "775",-->
+<!--                            -->
+<!--                            //"extra_list_connections": 0,-->
+<!--                        -->
+<!--                            "connect_timeout": 30,-->
+<!--                            //"keepalive": 120,-->
+<!--                            //"ftp_passive_mode": true,-->
+<!--                            //"ftp_obey_passive_host": false,-->
+<!--                            //"ssh_key_file": "~/.ssh/id_rsa",-->
+<!--                            //"sftp_flags": ["-F", "/path/to/ssh_config"],-->
+<!--                            -->
+<!--                            //"preserve_modification_times": false,-->
+<!--                            //"remote_time_offset_in_hours": 0,-->
+<!--                            //"remote_encoding": "utf-8",-->
+<!--                            //"remote_locale": "C",-->
+<!--                            //"allow_config_upload": false,-->
+<!--                        }-->
                         
                         
                         <!--//먹방 랭킹 차트 -->
@@ -242,9 +243,9 @@
 
 
     <!-- JavaScript Libraries -->
-    <script src="../js/jquery.min_1.12.4.js"></script>
-    <script src="../js/modernizr-custom.js"></script>
-    <script src="../js/slick.min.js"></script>
+    <script src="{% static 'js/jquery.min_1.12.4.js' %}"></script>
+    <script src="{% static 'js/modernizr-custom.js' %}"></script>
+    <script src="{% static 'js/slick.min.js' %}"></script>
     <script>
         //이미지 슬라이더
         $(".slider").slick({

@@ -37,7 +37,7 @@
 
 ### 5. Clone the Project from Github and Run Local Server
 #### 5.1. Fork the remote repository to your repository
-#### 5.2. Clone the project from your repository
+#### 5.2. Clone the project from your remote forked repository
 <https://recoveryman.tistory.com/257>
 
 

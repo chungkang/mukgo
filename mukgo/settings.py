@@ -76,9 +76,17 @@ WSGI_APPLICATION = 'mukgo.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'd2qmeeb0fo26be',
+        'USER': 'ureozqayjrlocz',
+        'PASSWORD': '43e2a6d90bd1e1330aa2fce4a4cc1c5ee6ec6ecd63a85d16a6e34ab2b09d50a4',
+        'HOST': 'ec2-184-72-235-80.compute-1.amazonaws.com',
+        'PORT': '5432',
     }
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    # }
 }
 
 

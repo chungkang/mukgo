@@ -2,7 +2,7 @@ from django.db import models
 from django.utils import timezone
 
 
-class Channels(models.Model):
+class Channel(models.Model):
     author = models.ForeignKey('auth.User', on_delete=models.CASCADE)
     title = models.CharField(max_length=100)
     url = models.CharField(max_length=100)

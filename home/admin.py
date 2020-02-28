@@ -1,4 +1,4 @@
 from django.contrib import admin
-from .models import Channels
+from .models import Channel
 
-admin.site.register(Channels)
+admin.site.register(Channel)

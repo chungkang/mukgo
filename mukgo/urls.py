@@ -18,9 +18,10 @@ from django.contrib import admin
 from home import views
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
-    url(r'^$', views.index),
-    url(r'^rank', views.rank),
+    url('admin/', admin.site.urls),
+    url('$', views.index),
+    url('rank', views.rank),
+    url('rank/<int:category>/', views.rank),
+    url('rank/<int:category>/<slug:keyword>/', views.rank),
     url(r'^community', views.community),
-    url(r'^search', views.search)
 ]

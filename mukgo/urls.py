@@ -18,10 +18,10 @@ from django.contrib import admin
 from home import views
 
 urlpatterns = [
-    url('admin/', admin.site.urls),
-    url('$', views.index),
-    url('rank', views.rank),
-    url('rank/<int:category>/', views.rank),
-    url('rank/<int:category>/<slug:keyword>/', views.rank),
-    url(r'^community', views.community),
+    url(r'^admin/', admin.site.urls),
+    url(r'^$', views.index),
+    url(r'^rank/$', views.rank),
+    url(r'^rank/(?P<category>.+)$', views.category_rank),
+
+    url(r'^community/', views.community),
 ]

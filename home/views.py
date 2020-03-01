@@ -8,9 +8,14 @@ def index(request):
     return render(request, 'index.html', {'message': msg})
 
 
-def rank(request, category, keyword):
+def rank(request):
     channels = Channel.objects.filter(published_at__isnull=False).order_by('-published_at')
     return render(request, 'rank.html', {'channels': channels})
+
+
+def category_rank(request, category):
+    channels = Channel.objects.filter(published_at__isnull=False).order_by('-published_at')
+    return render(request, 'rank.html', {'channels': channels, 'category': category})
 
 
 def community(request):

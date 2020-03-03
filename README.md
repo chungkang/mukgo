@@ -17,7 +17,7 @@
 ##### Windows OS
     C:\Python35> python Tools\scripts\pyvenv.py C:\PyEnv\venv1
 
-#### 3.2. Activate Virtual Environmnets
+#### 3.2. Activate Virtual Environments
 ##### Mac OS
     . ~/venv1/bin/activate
     

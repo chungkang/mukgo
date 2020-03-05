@@ -9,7 +9,7 @@ def index(request):
 
 
 def rank(request):
-    channels = Channel.objects.filter(published_at__isnull=False).order_by('-published_at')
+    channels = Channel.objects.filter(published_at__isnull=False).filter().order_by('-published_at')
     return render(request, 'rank.html', {'channels': channels})
 
 

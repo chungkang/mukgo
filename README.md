@@ -106,7 +106,6 @@ git staging 확인
 
 
 
-
 ## 참고 자료
 Django 프로젝트 이해
 http://pythonstudy.xyz/python/article/301-Django-%EC%86%8C%EA%B0%9C

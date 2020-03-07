@@ -1,63 +1,67 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-<article id="title">
+
+<!--================Home Banner Area =================-->
+<section class="banner_area">
+  <div class="banner_inner d-flex align-items-center">
     <div class="container">
-        <h2>실시간 먹방 랭킹으로 먹방을 고찰해보세요</h2>
+      <div
+        class="banner_content d-md-flex justify-content-between align-items-center"
+      >
+        <div class="mb-3 mb-md-0">
+          <h2>Ranking</h2>
+        </div>
+        <div class="page_link">
+          <a href="index.html">먹방 랭킹</a>
+          <a href="contact.html">랭킹</a>
+        </div>
+      </div>
     </div>
-</article>
+  </div>
+</section>
+<!--================End Home Banner Area =================-->
 
-<main>
-    <section id="contents">
-        <section class="container">
-            <h2 class="ir_su">컨텐츠</h2>
-            <section id="cont_center">
-
-
-                <table class="table table-dark">
-                  <thead>
-                    <tr>
-                     <th scope="col">순위</th>
-                      <th scope="col">채널명</th>
-                      <th scope="col">구독자 수</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {% for channel in channels %}
-                        <tr>
-                            <td></td>
-                            <td><a href="{{ channel.url }}" class="list-group-item">{{ channel.title }}</a></td>
-                            <td>{{ channel.subscribers }}</td>
-                        </tr>
-                        <tr>
-                            <td colspan="3"> {{ channel.genre }}</td>
-                        </tr>
-                        <tr>
-                            <td colspan="3" bgcolor="black"></td>
-                        </tr>
-                    {% endfor %}
-                  </tbody>
-                </table>
-            </section>
-            <section id="cont_right">
-                <h3 class="ir_su">왼쪽</h3>
-                <article class="column col1">
-                    <h4 class="col_tit">Menu</h4>
-                    <p class="col_desc">Box shadow 효과입니다.</p>
-                    <div class="menu">
-                        <ul>
-                            <li><a href="#">종합 랭킹<i class="fa fa-angle-double-right" aria-hidden="true"></i></a></li>
-                            <li><a href="#">국가 랭킹 <i class="fa fa-angle-double-right" aria-hidden="true"></i></a></li>
-                            <li><a href="#">분야 랭킹 <i class="fa fa-angle-double-right" aria-hidden="true"></i></a></li>
-                        </ul>
-                    </div>
-                </article>
-            </section>
-        </section>
-    </section>
-</main>
+<section class="blog_area area-padding">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-8 mb-5 mb-lg-0">
+                 <div class="blog_left_sidebar">
+                    <article id="title">
+                        <div class="container">
+                            <h2>실시간 먹방 랭킹으로 먹방을 고찰해보세요</h2>
+                        </div>
+                    </article>
+                    <h2 class="ir_su">컨텐츠</h2>
+                    <section id="cont_center">
+                        <table class="table table-dark">
+                            <thead>
+                                <tr>
+                                    <th scope="col">순위</th>
+                                    <th scope="col">채널명</th>
+                                    <th scope="col">구독자 수</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for channel in channels %}
+                                    <tr>
+                                        <td></td>
+                                        <td><a href="{{ channel.url }}" class="list-group-item">{{ channel.title }}</a></td>
+                                        <td>{{ channel.subscribers }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3"> {{ channel.genre }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3" bgcolor="black"></td>
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </section>
+                 </div>
+              </div>
+          </div>
+      </div>
+</section>
 {% endblock %}
-
-<script language="JavaScript">
-    let row_number = 0;
-</script>

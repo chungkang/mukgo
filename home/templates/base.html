@@ -2,27 +2,34 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<!--    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
 	<meta name="author" content="HSYOO">
 	<meta name="description" content="MukGo - 먹방에 관한 고찰">
 	<meta name="keywords" content="먹방에 관한 고찰, 먹방, Mukbang, 먹고, MukGo, 먹방 리스트, 쯔양, 벤쯔, 복희, 엠브로, jane asmr">
 	<title>MukGo-먹방에 관한 고찰</title>
 
-    <!-- 합쳐지고 최소화된 최신 CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-
-    <!-- 부가적인 테마 -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
-
-    <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-
-
-    <!--style-->
+    <!-- style-hsyoo -->
 	<link rel="stylesheet" href="{% static 'css/reset.css' %}">
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style-hsyoo.css' %}">
     <link rel="stylesheet" href="{% static 'css/font-awesome.css' %}">
     <link rel="stylesheet" href="{% static 'css/slick.css' %}">
+
+
+    <!-- Required meta tags -->
+    <link rel="icon" href="img/favicon.png" type="image/png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/themify-icons.css' %}">
+    <link rel="stylesheet" href="{% static 'css/flaticon.css' %}">
+    <link rel="stylesheet" href="{% static 'vendors/fontawesome/css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'vendors/owl-carousel/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'vendors/animate-css/animate.css' %}">
+    <!-- main css -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
 
 <!--meta tags
       < Facebook meta tags>
@@ -57,109 +64,220 @@
 
 </head>
 <body>
-	<header id="header">
+<!--================ Start header Top Area =================-->
+    <section class="header-top">
         <div class="container">
-            <div class="row">
-                <div class="header">
-                   <div class="header-menu">
-                       <a href="#">Youtube</a>
-                       <a href="#">Blog</a>
-                       <a href="#">Webstandard</a>
-                   </div>
-                   <!--//header menu-->
-                   <div class="header_tit">
-                       <h1>MukGo;먹방에 관한 고찰</h1><br>
-                       <a href="/">mukgo.net</a>
-                   </div>
-                   <!--//header_tit-->
-        <!--header_icon
-                   <div class="header_icon">
-                       <ul>
-                            <li><a href="#"><i class="fa fa-html5" aria-hidden="true"></i><span>HTML5</span></a></li>
-                            <li><a href="#"><i class="fa fa-github" aria-hidden="true"></i><span>GitHub</span></a></li>
-                            <li><a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i><span>Fackbook</span></a></li>
-                            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i><span>twitter</span></a></li>
+            <div class="row align-items-center justify-content-between">
+                <div class="col-6 col-lg-4">
+                    <div class="float-left">
+                        <ul class="header_social">
+                            <li><a href="#"><i class="ti-youtube"></i></a></li>
+                            <li><a href="#"><i class="ti-instagram"></i></a></li>
                         </ul>
-                   </div>
-               -->
+                    </div>
+                </div>
+                <div class="col-6 col-lg-4 col-md-6 col-sm-6 logo-wrapper">
+                    <a href="/" class="logo">
+                        <div class="header_tit">
+                           <h1>MukGo;<br>먹방에 관한 고찰</h1><br>
+                           <div>mukgo.net</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6 search-trigger">
+                    <div class="right-button">
+                        <ul>
+                            <li><a id="search" href="javascript:void(0)"><i class="fas fa-search"></i></a></li>
+                            <li><a href="">About</a></li>
+                            <li><a href="">Subscribe</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
+        </div>
+        <div class="search_input" id="search_input_box">
+            <div class="container ">
+                <form class="d-flex justify-content-between search-inner">
+                    <input type="text" class="form-control" id="search_input" placeholder="Search Here">
+                    <button type="submit" class="btn"></button>
+                    <span class="ti-close" id="close_search" title="Close Search"></span>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!--================ End header top Area =================-->
+
+    <!-- Start header Menu Area -->
+    <header id="header" class="header_area">
+        <div class="main_menu">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav menu_nav ml-auto mr-auto">
+                            <li class="nav-item submenu dropdown">
+                                <a href="/rank" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">먹방 랭킹</a>
+                                <ul class="dropdown-menu">
+                                    <li class="nav-item"><a class="nav-link" href="/rank">종합 랭킹</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="/rank">국가 랭킹</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="/rank">분야 랭킹</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item submenu dropdown">
+                                <a href="/community" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">먹방에 관한 고찰</a>
+                                <ul class="dropdown-menu">
+                                    <li class="nav-item"><a class="nav-link" href="/community">고찰</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="/community">나찰</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="/community">마찰</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
         </div>
     </header>
-    <!--header-->
-
-      <!--header-->
-    <nav id='nav'>
-        <div class="container">
-            <div class="row">
-                <div class="nav">
-                    <h2 class='ir_su'>전체메뉴</h2>
-                        <div>
-                            <h3><a href="/rank">먹방 랭킹</a></h3>
-                            <h4><a href="#">MukBang Rank</a></h4>
-                            <ol>
-                                <li><a href="#">종합 랭킹</a></li>
-                                <li><a href="#">국가 랭킹</a></li>
-                                <li><a href="#">분야 랭킹</a></li>
-                            </ol>
-                        </div>
-                        <div>
-                            <h3><a href="/community">먹방에 관한 고찰</a></h3>
-                            <h4><a href="#">Consideration about MukBang</a></h4>
-                            <ol>
-                                <li><a href="#">고찰들</a></li>
-                            </ol>
-                        </div>
-                </div>
-            </div>
-        </div>
-    </nav>
+    <!-- End header MEnu Area -->
 
     {% block content %}
     {% endblock %}
 
-    <footer id="footer">
+<!--    <footer id="footer">-->
+<!--        <div class="container">-->
+<!--            <h2>footer</h2>-->
+<!--        </div>-->
+<!--    </footer>-->
+<!--    &lt;!&ndash;//footer&ndash;&gt;-->
+
+
+       <!-- ================ start footer Area ================= -->
+    <footer class="footer-area">
         <div class="container">
-            <h2>footer</h2>
+            <div class="row">
+
+                <div class="col-lg-3 col-sm-6 mb-4 mb-xl-0 single-footer-widget">
+                    <h4>About Us</h4>
+                    <p>Heaven fruitful doesn't over lesser days appear creeping seasons so behold bearing days open</p>
+                    <div class="footer-logo">
+                        <img src="img/logo.png" alt="">
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-sm-6 mb-4 mb-xl-0 single-footer-widget">
+                    <h4>Contact Info</h4>
+                    <div class="footer-address">
+                        <span>Email : info.com</span>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-sm-6 mb-4 mb-xl-0 single-footer-widget">
+                    <h4>Important Link</h4>
+                    <ul>
+                        <li><a href="#">Search Domain</a></li>
+                        <li><a href="#">My Account</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-sm-6 col-md-6 mb-4 mb-xl-0 single-footer-widget">
+                    <h4>Newsletter</h4>
+                    <p>Heaven fruitful doesn't over lesser in days. Appear creeping seasons deve behold bearing days open</p>
+
+                    <div class="form-wrap" id="mc_embed_signup">
+                        <form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
+                        method="get">
+                        <div class="input-group">
+                            <input type="email" class="form-control" name="EMAIL" placeholder="Your Email Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Email Address '">
+                            <div class="input-group-append">
+                                <button class="btn click-btn" type="submit">
+                                    <i class="fab fa-telegram-plane"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div style="position: absolute; left: -5000px;">
+                            <input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
+                        </div>
+
+                        <div class="info"></div>
+                    </form>
+                </div>
+
+            </div>
         </div>
-    </footer>
-    <!--//footer-->
+        <div class="footer-bottom row align-items-center text-center text-lg-left no-gutters">
+            <p class="footer-text m-0 col-lg-8 col-md-12"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+            <div class="col-lg-4 col-md-12 text-center text-lg-right footer-social">
+<!--                <a href="#"><i class="ti-facebook"></i></a>-->
+<!--                <a href="#"><i class="ti-twitter-alt"></i></a>-->
+<!--                <a href="#"><i class="ti-dribbble"></i></a>-->
+                <a href="#"><i class="ti-linkedin"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- ================ End footer Area ================= -->
 
 
 
 
-    <!-- JavaScript Libraries -->
-    <script src="{% static 'js/jquery.min_1.12.4.js' %}"></script>
-    <script src="{% static 'js/modernizr-custom.js' %}"></script>
-    <script src="{% static 'js/slick.min.js' %}"></script>
-    <script>
-        //이미지 슬라이더
-        $(".slider").slick({
-            dots: true,
-            autoplay: true,
-            autoplaySpeed: 3000,
-            arrows: false,
-            responsive: [
-                {
-                    breakpoint: 768,
-                    settings: {
-                        arrows: true,
-                        dots: false
-                    }
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="{% static 'js/jquery-2.2.4.min.js' %}"></script>
+<script src="{% static 'js/popper.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/stellar.js' %}"></script>
+<script src="{% static 'vendors/popup/jquery.magnific-popup.min.js' %}"></script>
+<script src="{% static 'js/jquery.ajaxchimp.min.js' %}"></script>
+<script src="{% static 'js/waypoints.min.js' %}"></script>
+<script src="{% static 'js/mail-script.js' %}"></script>
+<script src="{% static 'js/contact.js' %}"></script>
+<script src="{% static 'js/jquery.form.js' %}"></script>
+<script src="{% static 'js/jquery.validate.min.js' %}"></script>
+<script src="{% static 'js/mail-script.js' %}"></script>
+<script src="{% static 'js/theme.js' %}"></script>
+
+
+
+<!-- JavaScript Libraries -->
+<script src="{% static 'js/jquery.min_1.12.4.js' %}"></script>
+<script src="{% static 'js/modernizr-custom.js' %}"></script>
+<script src="{% static 'js/slick.min.js' %}"></script>
+<script>
+    //이미지 슬라이더
+    $(".slider").slick({
+        dots: true,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        arrows: false,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    arrows: true,
+                    dots: false
                 }
-            ]
-        });
+            }
+        ]
+    });
 
-        //sns 공유하기
-        $(".facebook").click(function(e){
-            e.preventDefault();
-            window.open('https://www.facebook.com/sharer/sharer.php?u=' +encodeURIComponent(document.URL)+'&t='+encodeURIComponent(document.title), 'facebooksharedialog', 'menubar=no, toolbar=no, resizable=yes, scrollbars=yes, height=300, width=600');
-        });
-        $(".twitter").click(function(e){
-            e.preventDefault();
-            window.open('https://twitter.com/intent/tweet?text=[%EA%B3%B5%EC%9C%A0]%20' +encodeURIComponent(document.URL)+'%20-%20'+encodeURIComponent(document.title), 'twittersharedialog', 'menubar=no, toolbar=no, resizable=yes, scrollbars=yes, height=300, width=600');
-        });
-    </script>
+    //sns 공유하기
+    $(".facebook").click(function(e){
+        e.preventDefault();
+        window.open('https://www.facebook.com/sharer/sharer.php?u=' +encodeURIComponent(document.URL)+'&t='+encodeURIComponent(document.title), 'facebooksharedialog', 'menubar=no, toolbar=no, resizable=yes, scrollbars=yes, height=300, width=600');
+    });
+    $(".twitter").click(function(e){
+        e.preventDefault();
+        window.open('https://twitter.com/intent/tweet?text=[%EA%B3%B5%EC%9C%A0]%20' +encodeURIComponent(document.URL)+'%20-%20'+encodeURIComponent(document.title), 'twittersharedialog', 'menubar=no, toolbar=no, resizable=yes, scrollbars=yes, height=300, width=600');
+    });
+</script>
 
 </body>
 </html>

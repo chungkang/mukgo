@@ -82,7 +82,7 @@ Git의 사용법에 대해서는 '누구나 쉽게 이해할 수 있는 Git 입�
 	git checkout <branchname>
 	
 #### b. 로컬에서 commit 하고 원격 저장소로 push하기
-PyCharm을 에서 개발 개발
+PyCharm을 사용해서 개발
 
 git staging 확인
 

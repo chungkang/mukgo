@@ -102,7 +102,7 @@ git staging 확인
 
 	git push --set-upstream origin 브랜치명
 	
-	** git push 전에 github 계정 로그인
+** git push 전에 github 계정 로그인
 		
 자신의 깃허브 해당 원격 저장소에서 Compare&pull request 클릭하여 upstream 저장소로 전송
 
